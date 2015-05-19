@@ -16,7 +16,7 @@ def ipl():
     return json.dumps(xmltodict.parse(data), indent=4)
 
 
-@app.route('/abc')
+@app.route('/about')
 def hello():
     return redirect('https://github.com/shashisp/slack-ipl')
 
