@@ -1,4 +1,4 @@
-
+import os
 import requests
 import xmltodict
 import json
@@ -7,7 +7,7 @@ from flask import Flask, request, Response, redirect
 app = Flask(__name__)
 
 
-@app.route('/ipl', methods=['get'])
+@app.route('/', methods=['get'])
 def ipl():
     """ converts xml to json
     """
@@ -16,9 +16,9 @@ def ipl():
     return json.dumps(xmltodict.parse(data), indent=4)
 
 
-@app.route('/')
+@app.route('/abc')
 def hello():
-    return redirect('https://github.com/karan/slack-overflow')
+    return redirect('https://github.com/shashisp/slack-ipl')
 
 
 if __name__ == '__main__':
